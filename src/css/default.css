@@ -29,6 +29,7 @@ body {
     font-size: 12px;
     line-height: 1.5;
 }
+input{font: inherit;}
 
 /* layout */
 
@@ -39,6 +40,7 @@ body {
 
 .page>aside {
     width: 200px;
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -87,3 +89,32 @@ body {
 .clickable{
     cursor: pointer;
 }
+
+/* main */
+
+.form{
+    font-size: 14px;
+}
+.form > .row{
+    margin: 10px 0;
+}
+.form > .row.actions{
+    margin-left: 10px;
+}
+.form input[type=text]{
+    padding: 3px 8px;;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    height: 30px;
+}
+.form input[type=button],
+.form input[type=submit],
+.form button{
+    height: 30px;
+    padding: 0 10px;
+    /* border-radius: 5px; */
+}
+.page > main{
+    padding-top: 20px;
+}
+.page > main > .form{}
