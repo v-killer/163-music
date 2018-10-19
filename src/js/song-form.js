@@ -78,8 +78,12 @@
             this.view.render(this.model.data)
             window.eventHub.on('upload', (data) => {
                 this.model.data = data
-                console.log(data)
                 this.view.render(this.model.data)
+            })
+            window.eventHub.on('select',(data)=>{
+                this.model.data = data
+                this.view.render(this.model.data) 
+
             })
         },
         bindEvents() {
