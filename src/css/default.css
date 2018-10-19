@@ -56,10 +56,13 @@ input{font: inherit;}
     padding: 10px;
 }
 
-.newSong .active {
+.newSong.active {
     background: #d4d4d4
 }
 
+#songList-container{
+    flex-grow: 1;
+}
 .songList {
     flex-grow: 1;
     border-top: 2px solid #999;
@@ -74,7 +77,7 @@ input{font: inherit;}
     background: #d4d4d4
 }
 
-.uploadArea {}
+
 .draggable {
     text-align: center;
     padding: 20px;
@@ -117,4 +120,3 @@ input{font: inherit;}
 .page > main{
     padding-top: 20px;
 }
-.page > main > .form{}
