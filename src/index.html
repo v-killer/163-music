@@ -14,15 +14,15 @@
             </svg>
                 <a class="downloadApp" href="#">下载 APP</a>
             </header>
-          <nav class="siteNav">
+          <nav id="tabs"class="siteNav">
             <ol class="tabItems">
-              <li class="active"><span>推荐音乐</span></li>
-              <li><span>热歌榜</span></li>
-              <li><span>搜索</span></li>
+              <li class="active" data-tab-name="page-1"><span>推荐音乐</span></li>
+              <li data-tab-name="page-2"><span>热歌榜</span></li>
+              <li data-tab-name="page-3"><span>搜索</span></li>
             </ol>
           </nav>
           <ol class="tabContent">
-            <li class="active">
+            <li class="page-1 active">
               <section class="playlists">
                 <h2>推荐歌单</h2>
                 <ul>
@@ -55,7 +55,7 @@
               <section class="lastestMusic">
                 <h2>最新音乐</h2>
                 <p id="lastestMusicLoading">
-                  <img src="./images/loading.gif" alt="">
+                  <!-- <img src="./images/loading.gif" alt=""> -->
                 </p>
                 <ol id="lastestMusic"></ol>
               </section>
@@ -71,15 +71,27 @@
                 </div>
               </section>
             </li>
-            <li>
+            <li class="page-2">
               <p id="tab2Loading">
-                <img src="./images/loading.gif" alt="">
+                page2
+                <!-- <img src="./images/loading.gif" alt=""> -->
               </p>
             </li>
-            <li>
+            <li class="page-3">
               <input id="searchSong" type="text" style="border: 1px solid red;">
               <div id="output"></div>
             </li>
           </ol>
+          
+          <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+          <script src="../node_modules/leancloud-storage/dist/av-min.js"></script>
+          <script src="./js/initializers/av.js"></script>
+          <script src="./js/admin/event-hub.js"></script>
+
+          <script src="./js/index/tabs.js"></script>
+          <script src="./js/index/page-1.js"></script>
+          <script src="./js/index/page-2.js"></script>
+          <script src="./js/index/page-3.js"></script>
+
 </body>
 </html>
