@@ -1,23 +1,29 @@
 {
     let view = {
         el: 'section.lastestMusic',
+        template:`
+        <li>
+            <a href="./song.html?id={{song.id}}">
+                <h3>{{song.name}}</h3>
+                <p>{{song.singer}}</p>
+                <svg class="play">
+                    <use xlink:href="#icon-play-circled"></use>
+                </svg>
+            </a>
+        </li>
+        `,
         init(){
             this.$el = $(this.el)
         },
         render(data){
-                let {songs} = data
-                songs.map((song)=>{
-                let $li = $(`
-                <li>
-                    <a href="./song.html?id=1">
-                        <h3>${song.name}</h3>
-                        <p>${song.singer}</p>
-                        <svg class="play">
-                            <use xlink:href="#icon-play-circled"></use>
-                        </svg>
-                    </a>
-                </li>
-                `)
+            let {songs} = data
+            songs.map((song)=>{
+                let $li = $(this.template
+                    .replace('{{song.name}}',song.name)
+                    .replace('{{song.singer}}',song.singer)
+                    .replace('{{song.id}}',song.id)
+
+                )
                 this.$el.find('#lastestMusic').append($li)
             })
 
