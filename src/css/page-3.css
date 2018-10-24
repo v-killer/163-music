@@ -1,0 +1,23 @@
+.page-3 .search-area {
+    padding: 12px 10px;
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #f0f1f2;
+  }
+.page-3 .search-area label {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .page-3 .search-area label input {
+    width: 100%;
+    padding: 0 30px;
+    height: 30px;
+    font-size: 14px;
+    border: none;
+    border-radius: 35px;
+    background: #ebecec;
+  }
+  .page-3 .search-area label input:focus {
+    outline: none;
+  }
