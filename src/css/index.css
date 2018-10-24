@@ -6,6 +6,12 @@ h1,h2,h3{font-weight: normal;}
 html{
 	font-size: 10vw;
 }
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
 body{
 	font-size: 3.7vw;
 }
