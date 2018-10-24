@@ -1,6 +1,6 @@
 {
     let view = {
-        el: '.page > main',
+        el: 'main',
         init() {
             this.$el = $(this.el)
         },
@@ -9,32 +9,32 @@
             <div class="row">
                 <label>
                     歌名
-                    <input name="name" type="text" value="__name__">
                 </label>
+                <input name="name" type="text" value="__name__">
             </div>
             <div class="row">
                 <label>
                     歌手
-                    <input name="singer" type="text" value="__singer__">
                 </label>
+                <input name="singer" type="text" value="__singer__">
             </div>
             <div class="row">
                 <label>
                     外链
-                    <input name="url" type="text" value="__url__">
                 </label>
+                <input name="url" type="text" value="__url__">
             </div>
             <div class="row">
-            <label>
-                封面
+                <label>
+                    封面
+                </label>
                 <input name="cover" type="text" value="__cover__">
-            </label>
             </div>
             <div class="row">
-            <label>
-                歌词
+                <label>
+                    歌词
+                </label>
                 <textarea cols="100" rows="10" name="lyrics">__lyrics__</textarea>
-            </label>
             </div>
             <div class="row actions">
                 <button type="submit">保存</button>
